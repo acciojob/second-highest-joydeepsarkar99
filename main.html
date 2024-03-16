@@ -9,8 +9,19 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
-			
+			let first = -Infinity
+			let second = -Infinity
+  
+            for(let i of arr){
+				if(i > first){
+					second = first
+					first = i
+			    }
+				else if(i > second && i != first){
+				    second = i
+				}
+			}
+			return second
 		}
 
 		function Main() {
